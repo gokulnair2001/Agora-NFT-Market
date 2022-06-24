@@ -46,8 +46,6 @@ const Home = () => {
         redirect: 'follow'
       };
 
-      const api_key = "jPaT_6Ve_28bQR-H6f213BlHHgVrgOtY" //process.env.REACT_APP_API_KEY
-      const baseURL = `https://eth-mainnet.alchemyapi.io/nft/v2/${api_key}/getNFTsForCollection/`;
       const fetchURL = `${baseURL}?contractAddress=${collection}&withMetadata=${"true"}`;
       const nfts = await fetch(fetchURL, requestOptions).then(data => data.json())
 
